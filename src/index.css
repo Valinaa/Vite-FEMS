@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+:root {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Inter', 'Avenir', 'Helvetica', 'Arial', sans-serif;
+    font-synthesis: none;
+    line-height: 24px;
+    text-rendering: optimizelegibility;
+    color: rgb(255 255 255 / 87%);
+    background-color: #242424;
+    color-scheme: light dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+} */
+
+a {
+    font-weight: 500;
+    text-decoration: inherit;
+    color: #646cff;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+/*
+body {
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    place-items: center;
+} */
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+/*
+button {
+    padding: 0.6em 1.2em;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    transition: border-color 0.25s;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.card {
+    padding: 2em;
+}
+
+#app {
+    margin-top: 0;
+    font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif;
+    text-align: center;
+    color: #2c3e50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /*
+    max-width: 1280px;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    */
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: white;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+}
