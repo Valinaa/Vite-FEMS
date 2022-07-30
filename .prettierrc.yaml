@@ -1,0 +1,14 @@
+---
+    trailingComma: 'es5'
+    tabWidth: 4
+    printWidth: 80
+    useTabs: false
+    singleQuote: true
+    bracketSpacing: true
+    bracketSameLine: true
+    vueIndentScriptAndStyle: false
+    htmlWhitespaceSensitivity: ignore
+    singleAttributePerLine: true
+    endOfLine: auto
+    semi: false
+    editorconfig: false

@@ -3,7 +3,7 @@
  * @Author       : Valinaa 1114854003@qq.com
  * @Date         : 2022-07-16 16:49:43
  * @LastEditors  : Valinaa 1114854003@qq.com
- * @LastEditTime : 2022-07-29 00:48:48
+ * @LastEditTime : 2022-07-30 23:36:23
  * @FilePath     : \\PythonProject\\vite3\\src\\App.vue
  * @Description  : 核心组件
  *
@@ -14,11 +14,11 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import ManageView from "@/views/ManageView.vue";
+import ManageView from '@/views/ManageView.vue'
 </script>
 
 <template>
-    <ManageView />
+    <ManageView></ManageView>
 </template>
 
 <style scoped>

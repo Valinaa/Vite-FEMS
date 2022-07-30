@@ -3,6 +3,8 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
+export {}
+
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ActiveTable: typeof import('./src/components/ActiveTable.vue')['default']
@@ -66,5 +68,3 @@ declare module '@vue/runtime-core' {
     SideBar: typeof import('./src/components/SideBar.vue')['default']
   }
 }
-
-export {}

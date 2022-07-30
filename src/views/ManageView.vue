@@ -3,7 +3,7 @@
  * @Author       : Valinaa
  * @Date         : 2022-07-29 00:27:21
  * @LastEditors  : Valinaa 1114854003@qq.com
- * @LastEditTime : 2022-07-29 00:54:17
+ * @LastEditTime : 2022-07-30 01:58:02
  * @FilePath     : \\PythonProject\\vite3\\src\\views\\ManageView.vue
  * @Description  : 功能页面组件
  *
@@ -15,25 +15,27 @@
     <el-config-provider :locale="locale">
         <el-container>
             <el-header>
-                <NavBar />
+                <NavBar></NavBar>
             </el-header>
             <el-container>
                 <el-aside>
-                    <SideBar />
+                    <SideBar></SideBar>
                 </el-aside>
                 <el-container>
                     <el-main>
-                        <router-view></router-view>
+                        <Authentication></Authentication>
                     </el-main>
                     <el-footer>
-                        <Footer />
+                        <Footer></Footer>
                     </el-footer>
                 </el-container>
             </el-container>
         </el-container>
     </el-config-provider>
 </template>
+
 <script setup lang="ts">
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+
 const locale = ref(zhCn)
 </script>

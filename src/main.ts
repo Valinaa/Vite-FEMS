@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
 import '@/index.css';
-import App from '@/App.vue';
-import '@/assets/style.css';
-import router from '@/router';
 import VueAxios from 'vue-axios';
 import { createPinia } from 'pinia';
+import App from '@/App.vue';
+import '@/assets/style.scss';
+import router from '@/router';
 
 axios.defaults.baseURL = '/fire';
 

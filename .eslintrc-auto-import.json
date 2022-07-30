@@ -6,8 +6,6 @@
     "DataZoomComponent": true,
     "DatasetComponent": true,
     "EffectScope": true,
-    "ElMessage": true,
-    "ElMessageBox": true,
     "GridComponent": true,
     "LabelLayout": true,
     "LegendComponent": true,
