@@ -9,7 +9,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ActiveTable: typeof import('./src/components/ActiveTable.vue')['default']
     AnalyzePlot: typeof import('./src/components/AnalyzePlot.vue')['default']
-    Authentication: typeof import('./src/components/Authentication.vue')['default']
     DataTable: typeof import('./src/components/DataTable.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
@@ -40,7 +39,6 @@ declare module '@vue/runtime-core' {
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     ElUpload: typeof import('element-plus/es')['ElUpload']
-    Footer: typeof import('./src/components/Footer.vue')['default']
     HomePage: typeof import('./src/components/HomePage.vue')['default']
     IAkarIconsPerson: typeof import('~icons/akar-icons/person')['default']
     IBiActivity: typeof import('~icons/bi/activity')['default']
@@ -63,8 +61,10 @@ declare module '@vue/runtime-core' {
     Layout: typeof import('./src/components/Layout.vue')['default']
     MainNav: typeof import('./src/components/MainNav.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
+    PageFooter: typeof import('./src/components/PageFooter.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideBar: typeof import('./src/components/SideBar.vue')['default']
+    TakeAuth: typeof import('./src/components/TakeAuth.vue')['default']
   }
 }

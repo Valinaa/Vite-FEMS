@@ -3,17 +3,16 @@
  * @Author       : Valinaa 1114854003@qq.com
  * @Date         : 2022-07-16 16:49:43
  * @LastEditors  : Valinaa 1114854003@qq.com
- * @LastEditTime : 2022-07-30 23:36:23
- * @FilePath     : \\PythonProject\\vite3\\src\\App.vue
+ * @LastEditTime : 2022-08-03 00:20:22
+ * @FilePath     : \\vite3\\src\\App.vue
  * @Description  : 核心组件
  *
  * WeChat:Wish-Komorebi
  * Copyright (c) 2022 by Valinaa 1114854003@qq.com, All Rights Reserved.
 -->
 
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+<script lang="ts" setup>
+// eslint-disable-next-line import/default
 import ManageView from '@/views/ManageView.vue'
 </script>
 

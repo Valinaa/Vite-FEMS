@@ -16,7 +16,7 @@
         # 在闭括号之后必须有一个换行符
         block-closing-brace-newline-after: always
         # 禁止出现单行块
-        block-no-single-line: true
+        # block-no-single-line: true
         # 禁止空第一行
         no-empty-first-line: true
         # 在声明的块中中禁止出现重复的属性

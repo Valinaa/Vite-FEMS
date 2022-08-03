@@ -3,8 +3,8 @@
  * @Author       : Valinaa 1114854003@qq.com
  * @Date         : 2022-07-28 13:20:16
  * @LastEditors  : Valinaa 1114854003@qq.com
- * @LastEditTime : 2022-07-28 20:52:08
- * @FilePath     : \\PythonProject\\vite3\\src\\components\\SideBar.vue
+ * @LastEditTime : 2022-08-03 00:21:14
+ * @FilePath     : \\vite3\\src\\components\\SideBar.vue
  * @Description  : 侧边栏组件
  *
  * WeChat:Wish-Komorebi
@@ -14,12 +14,11 @@
 <template>
     <el-menu
         class="side-bar"
-        defaultActive="mainView"
+        default-active="mainView"
+        :collapse="Collapse"
         @mouseover="goCollapse"
         @click="goCollapse"
-        @mouseleave="leaveCollapse"
-        :collapse="Collapse"
-    >
+        @mouseleave="leaveCollapse">
         <el-menu-item index="mainView">
             <IFluentHome20Regular />
             <span>主页</span>
@@ -47,8 +46,7 @@
         </el-menu-item>
         <el-menu-item
             index="3"
-            disabled
-        >
+            disabled>
             <IFluentHome20Regular />
             <span>Navigator Three</span>
         </el-menu-item>
@@ -60,8 +58,12 @@
 </template>
 <script lang="ts" setup>
 const Collapse = ref(true)
-const goCollapse = () => { Collapse.value = false }
-const leaveCollapse = () => { Collapse.value = true }
+const goCollapse = () => {
+    Collapse.value = false
+}
+const leaveCollapse = () => {
+    Collapse.value = true
+}
 </script>
 <style scoped>
 /* stylelint-disable-next-line selector-class-pattern */

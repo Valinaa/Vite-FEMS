@@ -1,10 +1,11 @@
+<!-- eslint-disable vue/valid-v-else -->
 <!--
  * @GitHub       : https://github.com/Valinaa
  * @Author       : Valinaa 1114854003@qq.com
  * @Date         : 2022-07-17 23:24:46
  * @LastEditors  : Valinaa 1114854003@qq.com
- * @LastEditTime : 2022-07-30 23:34:32
- * @FilePath     : \\PythonProject\\vite3\\src\\components\\Authentication.vue
+ * @LastEditTime : 2022-08-04 01:05:12
+ * @FilePath     : \\vite3\\src\\components\\TakeAuth.vue
  * @Description  : 注册、登录组件
  *
  * WeChat:Wish-Komorebi
@@ -12,17 +13,14 @@
 -->
 
 <template>
-    <!-- eslint-disable -->
     <div class="container mx-auto">
         <transition mode="out-in">
             <div
                 v-if="showLogin"
-                class="box-content mx-auto w-80 h-2/6 bg-opacity-20 bg-stone-800"
-            >
+                class="box-content mx-auto w-80 h-2/6 bg-opacity-20 bg-stone-800">
                 <div
                     class="font-bold font-theme"
-                    style="font-family: '楷体', serif"
-                >
+                    style="font-family: '楷体', serif">
                     消防设备管理系统
                 </div>
                 <el-form
@@ -32,79 +30,74 @@
                     label-width="auto"
                     hide-required-asterisk
                     scroll-to-error
-                    status-icon
-                >
+                    status-icon>
                     <el-radio-group
                         v-model="loginForm.authSwitch"
                         class="auth-switch"
                         size="large"
-                        @change="authChange"
-                    >
-                        <el-radio-button label="Login">登录 </el-radio-button>
-                        <el-radio-button label="Register">注册
-                        </el-radio-button>
+                        @change="authChange">
+                        <el-radio-button label="Login">登录</el-radio-button>
+                        <el-radio-button label="Register">注册</el-radio-button>
                     </el-radio-group>
                     <el-form-item
                         label="用户名"
-                        prop="username"
-                    >
+                        prop="username">
                         <el-input
                             v-model="loginForm.username"
                             maxlength="15"
                             placeholder="请输入您的用户名"
                             show-word-limit
-                            clearable
-                        />
+                            clearable />
                     </el-form-item>
                     <el-form-item
                         label="密码"
-                        prop="password"
-                    >
+                        prop="password">
                         <el-input
                             v-model="loginForm.password"
                             type="password"
                             placeholder="请输入您的密码"
-                            show-password
-                        />
+                            show-password />
                     </el-form-item>
                     <el-form-item>
-                        <span style="
+                        <span
+                            style="
                                 margin-right: 10px;
                                 margin-left: 40px;
                                 color: ghostwhite;
-                            ">自动登录</span>
+                            ">
+                            自动登录
+                        </span>
                         <el-switch
                             v-model="loginForm.rememberMe"
                             class="switch"
                             inline-prompt
                             active-text="是"
-                            inactive-text="否"
-                        />
+                            inactive-text="否" />
                     </el-form-item>
                     <el-form-item>
                         <el-button
                             class="bt-submit"
                             type="success"
                             size="large"
-                            @click="submitLogin(loginFormRef)"
-                        >登录</el-button>
+                            @click="submitLogin(loginFormRef)">
+                            登录
+                        </el-button>
                         <el-button
                             class="bt-reset"
                             type="danger"
                             size="large"
-                            @click="resetForm(loginFormRef)"
-                        >重置</el-button>
+                            @click="resetForm(loginFormRef)">
+                            重置
+                        </el-button>
                     </el-form-item>
                 </el-form>
             </div>
             <div
                 v-else="!showLogin"
-                class="box-content mx-auto w-3/12 h-2/6 bg-opacity-20 bg-stone-800"
-            >
+                class="box-content mx-auto w-3/12 h-2/6 bg-opacity-20 bg-stone-800">
                 <div
                     class="font-bold font-theme"
-                    style="font-family: '楷体', serif"
-                >
+                    style="font-family: '楷体', serif">
                     消防设备管理系统
                 </div>
                 <el-form
@@ -114,80 +107,65 @@
                     label-width="auto"
                     hide-required-asterisk
                     scroll-to-error
-                    status-icon
-                >
+                    status-icon>
                     <el-radio-group
                         v-model="loginForm.authSwitch"
                         class="auth-switch"
                         size="large"
-                        @change="authChange"
-                    >
-                        <el-radio-button label="Login">登录 </el-radio-button>
-                        <el-radio-button label="Register">注册
-                        </el-radio-button>
+                        @change="authChange">
+                        <el-radio-button label="Login">登录</el-radio-button>
+                        <el-radio-button label="Register">注册</el-radio-button>
                     </el-radio-group>
                     <el-form-item
                         label="职位"
-                        prop="authority"
-                    >
+                        prop="authority">
                         <el-select
                             v-model="registerForm.authority"
-                            placeholder="请选择你的身份"
-                        >
+                            placeholder="请选择你的身份">
                             <el-option-group
                                 v-for="group in selectOptions"
                                 :key="group.label"
-                                :label="group.label"
-                            >
+                                :label="group.label">
                                 <el-option
                                     v-for="item in group.options"
                                     :key="item.value"
                                     :label="item.label"
-                                    :value="item.value"
-                                />
+                                    :value="item.value" />
                             </el-option-group>
                         </el-select>
                     </el-form-item>
                     <el-form-item
                         label="用户名"
-                        prop="username"
-                    >
+                        prop="username">
                         <el-input
                             v-model="registerForm.username"
                             maxlength="15"
                             placeholder="请输入您的用户名"
                             show-word-limit
-                            clearable
-                        />
+                            clearable />
                     </el-form-item>
                     <el-form-item
                         label="密码"
-                        prop="password"
-                    >
+                        prop="password">
                         <el-input
                             v-model="registerForm.password"
                             type="password"
                             placeholder="请输入您的密码"
-                            show-password
-                        />
+                            show-password />
                     </el-form-item>
                     <el-form-item
                         label="姓名"
-                        prop="name"
-                    >
+                        prop="name">
                         <el-input
                             v-model="registerForm.name"
-                            placeholder="请输入您的姓名"
-                        />
+                            placeholder="请输入您的姓名" />
                     </el-form-item>
                     <el-form-item
                         label="手机号"
-                        prop="phoneNumber"
-                    >
+                        prop="phoneNumber">
                         <el-input
                             v-model.number="registerForm.phoneNumber"
-                            placeholder="请输入您的联系方式"
-                        />
+                            placeholder="请输入您的联系方式" />
                     </el-form-item>
                     <el-form-item label="性别">
                         <el-radio-group v-model="registerForm.sex">
@@ -197,43 +175,42 @@
                     </el-form-item>
                     <el-form-item
                         label="年龄"
-                        prop="age"
-                    >
+                        prop="age">
                         <el-input
                             v-model.number="registerForm.age"
                             maxlength="2"
-                            placeholder="请输入您的年龄"
-                        />
+                            placeholder="请输入您的年龄" />
                     </el-form-item>
                     <el-form-item
                         label="邮箱"
-                        prop="email"
-                    >
+                        prop="email">
                         <el-input
                             v-model="registerForm.email"
-                            placeholder="请输入您的邮箱"
-                        />
+                            placeholder="请输入您的邮箱" />
                     </el-form-item>
                     <el-form-item>
                         <el-button
                             class="bt-submit"
                             type="success"
                             size="large"
-                            @click="submitRegister(registerFormRef)"
-                        >注册</el-button>
+                            @click="submitRegister(registerFormRef)">
+                            注册
+                        </el-button>
                         <el-button
                             class="bt-reset"
                             type="danger"
                             size="large"
-                            @click="resetForm(registerFormRef)"
-                        >重置</el-button>
+                            @click="resetForm(registerFormRef)">
+                            重置
+                        </el-button>
                     </el-form-item>
                 </el-form>
             </div>
         </transition>
     </div>
 </template>
-<!-- eslint-enable -->
+<!-- eslint-disable no-console -->
+
 <script lang="ts" setup>
 import { AxiosResponse } from 'axios'
 import { FormInstance, FormRules } from 'element-plus'
@@ -445,22 +422,33 @@ const loginData = toRaw(loginForm)
 interface Axios {
     method: string
     headers: { 'content-type': string }
-    data: any
+    data: {
+        authority: string
+        username: string
+        password: string
+        name: string
+        phoneNumber: string
+        sex: number
+        age: string
+        email: string
+    }
     url: string
 }
 /**
  ** 注册检验
  */
-const submitRegister = (formEl: FormInstance | undefined) => {
-    if (!formEl) return '校验失败' // 报错信息
-    formEl.validate(async (valid) => {
+const submitRegister = async (formEl: FormInstance | undefined) => {
+    if (!formEl) return // 报错信息
+    await formEl.validate(async (valid) => {
         if (valid) {
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
             console.log(`注册内容:${registerData}`)
             const registerAxios: Axios = {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/x-www-form-urlencoded',
                 },
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
                 data: qs.stringify(registerData),
                 url: 'user',
             }
@@ -476,10 +464,9 @@ const submitRegister = (formEl: FormInstance | undefined) => {
                         console.log(response.config)
                         console.log(response.headers)
                         console.log(response.statusText)
-                        return 'submit Success'
+                        return res
                     }
-                    console.log('response is empty')
-                    return 'submit with no response'
+                    throw new Error('res is null')
                 })
                 .catch((error) => {
                     console.log(error)
@@ -493,26 +480,29 @@ const submitRegister = (formEl: FormInstance | undefined) => {
 /**
  ** 登录检验
  */
-const submitLogin = (formEl: FormInstance | undefined) => {
+const submitLogin = async (formEl: FormInstance | undefined) => {
     if (!formEl) return
-    void formEl.validate((valid) => {
+    await formEl.validate(async (valid) => {
         if (valid) {
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
             console.log(`登录内容:${loginData}`)
             const loginAxios: Axios = {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/x-www-form-urlencoded',
                 },
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
                 data: qs.stringify(loginData),
                 url: 'loginCheck',
             }
-            axios(loginAxios)
+            await axios(loginAxios)
                 .then((response) => {
                     console.log(response.data)
                     console.log(response.status)
                     console.log(response.config)
                     console.log(response.headers)
                     console.log(response.statusText)
+                    return response
                 })
                 .catch((error) => {
                     console.log(error)

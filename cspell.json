@@ -1,0 +1,82 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "enabled": true,
+    "numSuggestions": 5,
+    "dictionaries": [
+        "typescript",
+        "node",
+        "css",
+        "html",
+        "fonts",
+        "npm",
+        "filetypes"
+    ],
+    "ignorePaths": [
+        "/node_modules/**",
+        "/.vscode/**",
+        "/static/**",
+        "*.yaml",
+        "*.json",
+        "tailwind.config.cjs",
+        "vite.config.ts",
+        "components.d.ts",
+        "auto-imports.d.ts",
+        "config.cjs",
+        "/package.json"
+    ],
+    "enabledLanguageIds": [
+        "css",
+        "git-commit",
+        "html",
+        "javascript",
+        "json",
+        "jsonc",
+        "jupyter",
+        "markdown",
+        "python",
+        "pug",
+        "scss",
+        "text",
+        "typescript",
+        "vue",
+        "yaml"
+    ],
+    "languageSettings": [
+        {
+            "languageId": "typescript,javascript,markdown,vue,css,scss,pug,yaml",
+            "locale": "*"
+        }
+    ],
+    "useGitignore": true,
+    "enableFiletypes": [
+        "*",
+        "tailwindcss",
+        "vue-sfc-style-variable-injection"
+    ],
+    "words": [
+        "axios",
+        "browserslist",
+        "cascader",
+        "consola",
+        "echarts",
+        "Heroicons",
+        "Kang",
+        "leetcode",
+        "nofunc",
+        "notnull",
+        "pinia",
+        "Pinia",
+        "postcss",
+        "semibold",
+        "tailwindcss",
+        "textinfo",
+        "unplugin",
+        "Vite",
+        "vueuse",
+        "vuex",
+        "websockets",
+        "whitegrid"
+    ],
+    "ignoreWords": []
+}

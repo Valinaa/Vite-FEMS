@@ -7,3 +7,4 @@ build
 tailwind.config.cjs
 **/*.d.ts
 auto-imports.d.ts
+cspell.config.cjs

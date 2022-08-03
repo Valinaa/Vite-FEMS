@@ -3,8 +3,8 @@
  * @Author       : Valinaa 1114854003@qq.com
  * @Date         : 2022-07-28 17:49:31
  * @LastEditors  : Valinaa 1114854003@qq.com
- * @LastEditTime : 2022-07-29 00:24:24
- * @FilePath     : \\PythonProject\\vite3\\src\\components\\Footer.vue
+ * @LastEditTime : 2022-08-03 00:25:04
+ * @FilePath     : \\vite3\\src\\components\\Footer.vue
  * @Description  : 底栏组件
  *
  * WeChat:Wish-Komorebi
@@ -13,9 +13,11 @@
 
 <template>
     <div class="text-center">
-        <span>与我联系: www.EcustCK@163.com</span><br />
-        <span class="font-bold">Copyright © 2022 Valinaa. All rights
-            reserved.</span>
+        <span>与我联系: www.EcustCK@163.com</span>
+        <br />
+        <span class="font-bold">
+            Copyright © 2022 Valinaa. All rights reserved.
+        </span>
     </div>
 </template>
 <style scoped>
@@ -25,7 +27,7 @@ div {
 }
 
 span {
-    font-family: 'Helvetica Neue', "Helvetica", 'PingFang SC', 'Hiragino Sans GB',
-        'Microsoft YaHei', '微软雅黑', "Arial", sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'PingFang SC',
+        'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 }
 </style>

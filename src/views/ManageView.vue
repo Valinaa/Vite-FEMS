@@ -3,8 +3,8 @@
  * @Author       : Valinaa
  * @Date         : 2022-07-29 00:27:21
  * @LastEditors  : Valinaa 1114854003@qq.com
- * @LastEditTime : 2022-07-30 01:58:02
- * @FilePath     : \\PythonProject\\vite3\\src\\views\\ManageView.vue
+ * @LastEditTime : 2022-08-04 01:07:17
+ * @FilePath     : \\vite3\\src\\views\\ManageView.vue
  * @Description  : 功能页面组件
  *
  * WeChat:Wish-Komorebi
@@ -23,10 +23,11 @@
                 </el-aside>
                 <el-container>
                     <el-main>
-                        <Authentication></Authentication>
+                        dd
+                        <!-- <TakeAuth></TakeAuth> -->
                     </el-main>
                     <el-footer>
-                        <Footer></Footer>
+                        <PageFooter></PageFooter>
                     </el-footer>
                 </el-container>
             </el-container>

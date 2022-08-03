@@ -14,24 +14,24 @@
     <el-menu
         class="font-mono font-bold"
         mode="horizontal"
-        :ellipsis="ellipsis"
-    >
+        :ellipsis="ellipsis">
         <el-menu-item index="1">
-            <i style="font-size: 30px;color: red;">
+            <i style="font-size: 30px; color: red">
                 <IHeroiconsSolidFire />
             </i>
         </el-menu-item>
         <el-menu-item
             index="2"
-            disabled
-        >
-            <IBiGift />功能待扩展...
+            disabled>
+            <IBiGift />
+            功能待扩展...
         </el-menu-item>
 
         <div class="flex-grow" />
         <el-sub-menu index="3">
             <template #title>
-                <IAkarIconsPerson />姓名
+                <IAkarIconsPerson />
+                姓名
             </template>
             <el-menu-item index="3-1">首页</el-menu-item>
             <el-menu-item index="3-2">个人信息</el-menu-item>
